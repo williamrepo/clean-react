@@ -1,0 +1,36 @@
+{
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "extends": [
+        //   aula 3
+      "standard-with-typescript",
+      "plugin:react/recommended",
+      "plugin:cypress/recommended"
+    ],
+    "env": {
+      "cypress/globals": true
+    },
+    "plugins": ["react", "cypress"],
+    "parserOptions": {
+      "project": "./tsconfig-eslint.json"
+    },
+    "rules": {
+        //  aula 3: 
+        // habilitar a possibilidade de usar interface e type-alias
+      "@typescript-eslint/consistent-type-definitions": "off",
+    //   habilita a possibilidade de fazer comparação de não boleanos exe: !myBool === anotherBool
+      "@typescript-eslint/strict-boolean-expressions": "off",
+    // fim aula 3
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/comma-spacing": "off",
+      "@typescript-eslint/return-await": "off",
+      "@typescript-eslint/no-namespace": "off",
+      "no-redeclare": "off",
+      "import/export": "off",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error"
+    }
+  }
